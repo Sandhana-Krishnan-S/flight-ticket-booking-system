@@ -1,46 +1,53 @@
-.main {
-    background-color: #282c34;
+.Login-main {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    padding: 48px;
+}
+
+.Login-heading {
+    padding: 24px;
+    margin: 24px;
+    position: relative;
+}
+
+.Login-font {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 24px;
+}
+
+#Login-tittle {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+#Login-subtext {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.Login-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.Login-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
     align-items: center;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    margin: 24px;
-    float: left;
-}
-
-.font {
-    color: white;
+.forgotPassword {
+    margin: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
 }
 
-#heading {
-    font-size: 56px;
-}
-
-#sub-heading {
-    font-size: 32px;
-}
-
-#paragraph {
-    font-size: 20px;
-    width: 35%;
-}
-
-.blue {
-    color: #5680ED;
-}
-
-.cover-img {
-    object-fit: cover;
-    object-position: center; 
-    overflow: -moz-hidden-unscrollable;
-    width: 1000px;
-    height: 50vh;
-    overflow: hidden;
-    float: right;
+.img-overlay {
+    position: absolute;
+    scale: 0.75;
+    top: 0px;
+    left: -40px;
 }
