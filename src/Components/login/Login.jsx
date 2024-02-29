@@ -21,25 +21,25 @@ export default function Login() {
         <div>
           <form onSubmit={() => {}}>
             <div className='Login-input'>
-              <label>Username : </label>
-              <input type='text' autoFocus />
+              <label className='login-lable'>Username : </label>
+              <input type='text' autoFocus className='login-input'/>
             </div>
             <div className='Login-input'>
-              <label>Password : </label>
-              <input type = {showPassword ? 'text' : 'password'}/>
+              <label className='login-lable'>Password : </label>
+              <input type = {showPassword ? 'text' : 'password'} className='login-input'/>
             </div>
             <div className='Login-row'>
              <div>
-                <input type='checkbox' checked={showPassword} onChange={togglePasswordVisibility} /> <span className='forgotPassword'>Show Password</span>
+                <input type='checkbox' checked={showPassword} onChange={togglePasswordVisibility} /> <span className='showPassword'>Show Password</span>
              </div>
              <p className='forgotPassword'>Forgot Password?</p>
             </div>
-            <div className='Login-input'>
-              <input type='submit'/>
+            <div id='submit'>
+              <input type='submit' className='login-button'/>
             </div>
           </form>
         </div>
-        <p>Don't have an account? <span className='blue'>Sign up</span></p>
+        <p className='bottom-statement'>Don't have an account?  <span className='blue' id='pad'> Sign up</span></p>
       </div>
       <div className='cover-img'></div>
     </div>

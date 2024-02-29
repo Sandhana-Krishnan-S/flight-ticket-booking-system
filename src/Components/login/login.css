@@ -37,12 +37,80 @@
     justify-content: space-between;
     text-align: center;
     align-items: center;
+    margin: 21px 1px 21px 21px;
+}
+
+.showPassword {
+    color: #5680ED;
+}
+
+.forgotPassword {
+    color: #F1E8E8;
+}
+
+.login-lable {
+    color: aliceblue;
+    text-align: justify;
+    font-size: 20px;
+    padding: 21px;
+}
+
+.login-input {
+    margin-left: 21px;
+    background-color: #F1E8E8;
+    height: 30px;
+    width: 280px;
+    border-radius: 12px;
+    border: none;
+    padding: 4px 12px;
+    color: darkslategray;
+    font-size: 16px;
+}
+
+.login-button {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    width: 280px;
+    height: 40px;
+    background-color: #5680ED;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 21px;
+    padding: 2px 12px;
+    outline: none;
+}
+
+#submit {
+     width: auto;
+     display: flex;
+     justify-content: center;
+     margin: 0px;
+     padding: 0px;
+}
+
+input:focus {
+    outline: 2px solid #5680ED;
 }
 
 .forgotPassword {
     margin: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 14px;
+}
+
+.bottom-statement {
+    display: flex;
+    justify-content: center;
+    margin: 21px;
+    color: #F1E8E8;
+}
+
+#pad {
+    margin-left: 8px;
 }
 
 .img-overlay {
