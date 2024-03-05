@@ -5,11 +5,9 @@ import Login from '../Components/login/Login'
 
 export default function Navigator() {
   return (
-    <div>
         <Routes>
           <Route path='/' element = {<Home />}></Route>
           <Route path='/login' element = {<Login />}></Route>
         </Routes>
-    </div>
   )
 }

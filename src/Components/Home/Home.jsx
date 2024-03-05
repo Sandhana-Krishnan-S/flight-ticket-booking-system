@@ -23,7 +23,7 @@ export default function Home() {
             </div>
         </div>
         <div className='cover-img'>
-            <img src={flight} alt="" srcset="" />
+            <img src={flight} alt="" />
         </div>
         </div>
         <div style={{textAlign: 'center'}}>

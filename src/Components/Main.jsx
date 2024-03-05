@@ -4,10 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 
 export default function Main() {
   return (
-    <div>
-        <BrowserRouter>
-            <Navigator />
-        </BrowserRouter>
-    </div>
+      <BrowserRouter>
+          <Navigator />
+      </BrowserRouter>
   )
 }
