@@ -19,7 +19,7 @@ export default function Home() {
                 <div className='btn' onClick={() => navigateLogin()}>
                     <span className='btn-text'>Login</span>
                 </div>
-                <p className='font' id='register-hint' onClick={() => {}}>Don’t have an account? <span className='blue' id='register'>Register</span></p>
+                <p className='font' id='register-hint' onClick={() => {Navigate('/register')}}>Don’t have an account? <span className='blue' id='register'>Register</span></p>
             </div>
         </div>
         <div className='cover-img'>

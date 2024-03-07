@@ -1,25 +1,26 @@
 import React, { useState } from 'react'
 import flyon from '../../Assets/fly_on.png'
-import LoginCover from '../../Assets/Login-cover.png'
+import LoginCover from '../../Assets/Signup-cover.png'
 import './login.css'
-import loginhandler from '../../service/loginhandler';
+import signuphandler from '../../service/signuphandler';
 import { useNavigate } from 'react-router-dom';
 
-export default function Login() {
+export default function Signup() {
   const Navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
   const [email , setEmail] = useState('')
+  const [Username , setUsername] = useState('')
   const [password , setPassword] = useState('')
 
-  const navigateToRegister = () => {
-    Navigate('/register');
-  };
+  const navigateToLogin = () => {
+    Navigate('/login')
+  }
 
   async function validate(event) {
     event.preventDefault()
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if(emailRegex.test(email)) {
-      const flag = await loginhandler(email , password)
+      const flag = await signuphandler(Username , email , password)
       if(flag) {
         Navigate('/')
       }
@@ -37,9 +38,9 @@ export default function Login() {
   }
   return (
     <div className='Login-main'>
-      <div className='Login-content'>
+      <div className='Signup-content'>
         <div className='Login-heading'>
-          <h2 className='Login-font' id='Login-tittle'>Login</h2>
+          <h2 className='Login-font' id='Login-tittle'>Signup</h2>
           <p className='Login-font' id='Login-subtext'>Way to <span className='blue'>Fly-Over</span></p>
           <div className='img-overlay'>
             <img src={flyon} alt=""/>
@@ -47,6 +48,10 @@ export default function Login() {
         </div>
         <div>
           <form onSubmit={validate}>
+          <div className='Login-input'>
+              <label className='login-lable'>Username : </label>
+              <input type='text' autoFocus className='login-input'  onChange={(e) => setUsername(e.target.value)}/>
+            </div>
             <div className='Login-input'>
               <label className='login-lable'>Email : </label>
               <input type='text' autoFocus className='login-input'  onChange={(e) => setEmail(e.target.value)}/>
@@ -59,16 +64,15 @@ export default function Login() {
              <div>
                 <input type='checkbox' checked={showPassword} onChange={togglePasswordVisibility}  /> <span className='showPassword'>Show Password</span>
              </div>
-             <p className='forgotPassword'>Forgot Password?</p>
             </div>
             <div id='submit'>
-              <input type='submit' value='Login' className='login-button'/>
+              <input type='submit' value='Signup' className='login-button'/>
             </div>
           </form>
         </div>
-        <p className='bottom-statement' onClick={ navigateToRegister } >Don't have an account?  <span className='blue' id='pad'> Sign up</span></p>
+        <p className='bottom-statement' onClick={navigateToLogin}> have an account?  <span className='blue' id='pad'> login</span></p>
       </div>
-      <div className='login-cover-img'>
+      <div className='Signup-cover-img' style={{marginLeft : '10%'}}>
         <img src={LoginCover} alt="no img" className='img' />
       </div>
     </div>

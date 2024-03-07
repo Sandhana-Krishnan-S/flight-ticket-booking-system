@@ -1,8 +1,9 @@
 import axios from "axios";
 
-const loginhandler = async (email , password) => {
+const signuphandler = async (username , email , password) => {
     try {
-        const response = await axios.post('http://localhost:3577/auth/login', {
+        const response = await axios.post('http://localhost:3577/auth/register', {
+            UserName : username, 
             Email: email,
             Password: password
         });
@@ -14,5 +15,4 @@ const loginhandler = async (email , password) => {
     }
 }
 
-
-export default loginhandler;
+export default signuphandler;

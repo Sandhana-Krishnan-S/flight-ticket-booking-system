@@ -116,6 +116,7 @@ input:focus {
     justify-content: center;
     margin: 21px;
     color: #F1E8E8;
+    cursor: pointer;
 }
 
 #pad {
