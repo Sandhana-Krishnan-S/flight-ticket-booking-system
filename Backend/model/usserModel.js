@@ -23,7 +23,11 @@ const userSchema = new Schema({
         trim : true ,
         minLength : 8 , 
         maxLength : 16
-    }
+    } ,
+    bookedSeats: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Seat'
+      }]
 })
 
 

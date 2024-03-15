@@ -1,6 +1,8 @@
 const express = require('express')
 const authRoute = require('./router/authRoute')
 const bodyParser = require('body-parser');
+const resetSeat = require('./SeatManager/seatReseter'); 
+const cron = require('node-cron')
 require('./DB/mongoDb')
 const port = 3577
 
@@ -21,6 +23,13 @@ app.use('/auth' , authRoute)
 
 app.use('/' , (req, res) => {
     res.send('Hello World!')})
+
+    console.log('Setting up cron job for seat initialization...');
+    cron.schedule('0 */5 * * *9', () => {
+        console.log('Running seat initialization script...');
+        resetSeat();
+    });
+    
 
 app.listen(port , () => {
     console.log(`App is running on http://localhost:${port}`)
