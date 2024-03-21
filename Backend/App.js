@@ -25,7 +25,7 @@ app.use('/' , (req, res) => {
     res.send('Hello World!')})
 
     console.log('Setting up cron job for seat initialization...');
-    cron.schedule('0 */5 * * *9', () => {
+    cron.schedule('0 */5 * * *', () => {
         console.log('Running seat initialization script...');
         resetSeat();
     });

@@ -46,7 +46,6 @@ const register = async (req , res) => {
         else {
             if(Validate(userData)) {
                 const newUser = await new UserData(userData).save()
-                console.log("object")
                 res.status(200).json({
                     status : true ,
                     message : 'The User has been succesfully regestered!.'
